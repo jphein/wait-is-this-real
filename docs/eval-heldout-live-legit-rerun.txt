@@ -1,0 +1,13 @@
+✓   8 low        calfresh-interview-call-worker agency=calfresh [rules+workers-ai]
+✓   0 low        ebt-deposit-balance    agency=ebt [rules+workers-ai]
+✓   0 low        ssa-cola-notice-letter agency=ssa [rules+workers-ai]
+✓   0 low        ssa-overpayment-notice agency=ssa [rules+workers-ai]
+✓   0 low        coveredca-documentos-ingresos agency=coveredca [rules+workers-ai]
+✓   0 low        dmv-registration-renewal agency=dmv [rules+workers-ai]
+✓   0 low        edd-certify-reminder   agency=edd [rules+workers-ai]
+✓   0 low        medicare-summary-notice agency=medicare [rules+workers-ai]
+✓   8 low        lifeline-renovacion-formulario agency=lifeline [rules+workers-ai]
+✓   0 low        pharmacy-refill-ready  agency=medical [rules+workers-ai]
+✓   0 low        familia-junta-escuela  agency=- [rules+workers-ai]
+
+11 vectors  precision 0.0%  recall 0.0%  false alarms on legit 0/11  agency top-1 9/9
