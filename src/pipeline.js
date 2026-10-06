@@ -37,7 +37,7 @@ Rules for your answer:
 - Write "summary", "extra_flags" and "next_steps" in ${language}.
 - NEVER write any phone number, web address or email address. The app adds verified official contacts itself.
 - "likelihood" is 0-100 that this is a scam. Ordinary, expected notices that send people to official sites or to mail/county offices are low.
-- "extra_flags": only red flags NOT already listed by the checker; [] if none.
+- "extra_flags": red flags NOT already listed by the checker. Each "title" is a short plain phrase (like "Asks for your date of birth by text"); each "why" is one sentence. If the checker listed nothing and your likelihood is 40 or more, you MUST give at least one. [] only when there is truly nothing.
 - "next_steps": 2-4 short concrete actions (e.g. "Don't reply or tap the link", "Call the agency using the number on your card or on their official site").
 Respond with only a JSON object with keys agency, scam_type, likelihood, summary, extra_flags, next_steps.`;
 }

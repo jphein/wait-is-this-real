@@ -88,3 +88,8 @@ test("a broken model answer falls back to rules, not an error", async () => {
 test("parseAnswer pulls JSON out of chatty output", () => {
   assert.deepEqual(parseAnswer('Sure! {"a":1} hope that helps'), { a: 1 });
 });
+
+test("asking for SSN digits by text is a red flag", () => {
+  const r = analyze("Text me back your date of birth and the last 4 of your SSN and I will take care of it.");
+  assert.ok(r.flags.some((f) => f.id === "asks_secret"));
+});
