@@ -50,7 +50,7 @@ export const FLAGS = [
   {
     id: "asks_secret",
     weight: 0.7, critical: true,
-    re: [/\b(pin|password|passcode|one[- ]time code|verification code|otp|security code)\b/i, /\b(full )?(ssn|social security number|bank (account|login)|routing number|card number|medicare number|mbi)\b.{0,30}\b(confirm|verify|provide|send|reply|enter|update)\b/i, /\b(confirm|verify|provide|send|reply with|enter|update)\b.{0,40}\b(ssn|social security number|bank (account|login)|routing number|card number|medicare number|date of birth)\b/i, /\b(contraseña|c[oó]digo (de verificaci[oó]n|de seguridad)|n[uú]mero de (tarjeta|cuenta|seguro social))\b/i, /\bpin\b/i],
+    re: [/\b(pin|password|passcode|one[- ]time code|verification code|otp|security code)\b/i, /\b(full )?(ssn|social security number|bank (account|login)|routing number|card number|medicare number|mbi)\b.{0,30}\b(confirm|verify|provide|send|reply|enter|update)\b/i, /\b(confirm|verify|provide|send|reply with|enter|update|text (me )?back|tell me|read me|give me)\b.{0,50}\b(ssn|social security( number)?|bank (account|login)|routing number|card number|medicare number|date of birth|last (4|four) )/i, /\b(contraseña|c[oó]digo (de verificaci[oó]n|de seguridad)|n[uú]mero de (tarjeta|cuenta|seguro social))\b/i, /\bpin\b/i],
     title: { en: "Asks for a PIN, code, password or your full SSN", es: "Pide un PIN, código, contraseña o su número de Seguro Social" },
     why: { en: "Your EBT PIN and one-time codes are like house keys. No agency, bank or utility will ever ask you to read them out or type them into a link.", es: "Su PIN de EBT y los códigos de un solo uso son como las llaves de su casa. Ninguna agencia, banco o compañía le pedirá decirlos ni escribirlos en un enlace." },
   },
