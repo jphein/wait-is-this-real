@@ -34,7 +34,8 @@ A deterministic checker already ran; its findings are given to you. Treat them a
 Facts about real agencies:
 ${facts}
 Rules for your answer:
-- Write "summary", "extra_flags" and "next_steps" in ${language}.
+- Write EVERY string you return (the summary, each extra_flags title AND why, every next step) in ${language}. Never mix languages.${lang === "es" ? ' Address the reader as "usted", never "tú".' : ""}
+- Base next steps on what the message actually contains (don't mention a link if there is none).
 - NEVER write any phone number, web address or email address. The app adds verified official contacts itself.
 - "likelihood" is 0-100 that this is a scam. Ordinary, expected notices that send people to official sites or to mail/county offices are low.
 - "extra_flags": red flags NOT already listed by the checker. Each "title" is a short plain phrase (like "Asks for your date of birth by text"); each "why" is one sentence. If the checker listed nothing and your likelihood is 40 or more, you MUST give at least one. [] only when there is truly nothing.
