@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wait-is-this-real",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "ai": { "binding": "AI" },
+  "kv_namespaces": [{ "binding": "BUDGET", "id": "5fd2fe16d2d94092ac7330380f92029b" }],
+  "vars": { "MODEL_PROVIDER": "workers-ai", "DAILY_BIG": "60", "DAILY_SMALL": "120", "HOURLY_PER_IP": "30" },
+  "observability": { "enabled": false }
+}

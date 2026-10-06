@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wait, Is This Real?</title>
+  <meta name="description" content="Paste a text, email or letter about benefits or bills. Find out if it's a scam, in English or Spanish, with the official number to check.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#msg" data-i18n="skip">Skip to the message box</a>
+  <header class="top">
+    <div class="brand">
+      <img src="/favicon.svg" alt="" width="40" height="40">
+      <div>
+        <h1 data-i18n="title">Wait, Is This Real?</h1>
+        <p class="tag" data-i18n="tagline">A free scam check for messages about benefits and bills.</p>
+      </div>
+    </div>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="es" aria-pressed="false">Español</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ask" aria-labelledby="ask-h">
+      <h2 id="ask-h" data-i18n="askH">Got a text, email, call or letter that worries you?</h2>
+      <p data-i18n="askP">Paste it below. We'll look for the tricks scammers use and show you the real agency's number so you can check for yourself.</p>
+      <label for="msg" class="sr" data-i18n="label">Message to check</label>
+      <textarea id="msg" rows="7" maxlength="8000" data-i18n-ph="placeholder" placeholder="Paste the message here…"></textarea>
+      <div class="row">
+        <button id="go" class="primary" type="button" data-i18n="check">Check it</button>
+        <button id="clear" class="ghost" type="button" data-i18n="clear">Clear</button>
+      </div>
+      <div class="examples">
+        <span data-i18n="try">Try an example:</span>
+        <button type="button" class="chip" data-ex="ebt" data-i18n="exEbt">EBT "card locked" text</button>
+        <button type="button" class="chip" data-ex="pge" data-i18n="exPge">PG&amp;E shut-off call</button>
+        <button type="button" class="chip" data-ex="medical" data-i18n="exMedical">Medi-Cal renewal letter</button>
+      </div>
+      <p class="privacy" data-i18n="privacy">We don't save what you paste. Remove names, account numbers and your address before checking if you can.</p>
+    </section>
+
+    <section id="result" class="result" hidden aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p data-i18n="foot">Made for families who get these messages every week. Not legal advice. If you already sent money or a code, call your bank and report it right away.</p>
+    <p class="meta"><a href="https://github.com/jphein/wait-is-this-real">Source code</a> · <span id="ver"></span></p>
+  </footer>
+</body>
+</html>
