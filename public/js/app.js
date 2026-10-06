@@ -169,5 +169,5 @@ $("#go").addEventListener("click", run);
 $("#msg").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) run(); });
 $("#clear").addEventListener("click", () => { $("#msg").value = ""; $("#result").hidden = true; lastResult = null; lastText = ""; $("#msg").focus(); });
 document.querySelectorAll("[data-ex]").forEach((b) => b.addEventListener("click", () => { $("#msg").value = EXAMPLES[b.dataset.ex][lang]; run(); }));
-fetch("/api/version").then((r) => r.ok ? r.json() : null).then((v) => { if (v) $("#ver").textContent = `${v.version} · ${v.hash}`; }).catch(() => {});
+fetch("/api/version").then((r) => r.ok ? r.json() : null).then((v) => { if (v) $("#ver").textContent = v.version; }).catch(() => {});
 applyLang();

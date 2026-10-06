@@ -3,8 +3,8 @@
 // every "verify at" and "report to" contact comes from this file. A model that
 // invents a "call this number to verify" would itself become a scam vector.
 //
-// Each contact was checked against the agency's own website (see README,
-// "Keeping the contacts honest"). `domains` lists the official hostnames;
+// Each contact was checked against the agency's own website on 2026-10-06;
+// sources are in docs/kb-sources.md (see README, "Keeping the contacts honest"). `domains` lists the official hostnames;
 // any subdomain of these is treated as official.
 
 export const KB_VERSION = "2026-10-06";
@@ -60,7 +60,7 @@ export const AGENCIES = {
     domains: ["dhcs.ca.gov", "ca.gov", "benefitscal.com"],
     keywords: ["medi-cal", "medical", "medi cal", "dhcs", "renewal packet", "paquete de renovación", "renovación de medi-cal"],
     verify: { phone: "1-800-541-5555", url: "https://www.dhcs.ca.gov/services/medi-cal" },
-    report: { label: { en: "DHCS Medi-Cal fraud hotline", es: "Línea de fraude de Medi-Cal (DHCS)" }, url: "https://www.dhcs.ca.gov/individuals/Pages/StopMedi-CalFraud.aspx", phone: "1-800-822-6222" },
+    report: { label: { en: "DHCS Medi-Cal fraud hotline", es: "Línea de fraude de Medi-Cal (DHCS)" }, url: "https://www.dhcs.ca.gov/individuals/stop-medi-cal-fraud-complaint-form/", phone: "1-800-822-6222" },
     does: {
       en: ["Renews coverage through your county office, usually by mail", "Is free or low-cost; renewal never costs a fee"],
       es: ["Renueva la cobertura por medio de su oficina del condado, casi siempre por correo", "Es gratis o de bajo costo; renovar nunca cuesta"],
@@ -75,7 +75,7 @@ export const AGENCIES = {
     domains: ["coveredca.com"],
     keywords: ["covered california", "covered ca", "coveredca", "obamacare", "marketplace", "health plan premium"],
     verify: { phone: "1-800-300-1506", url: "https://www.coveredca.com" },
-    report: { label: { en: "California Department of Insurance fraud", es: "Fraude — Departamento de Seguros de California" }, url: "https://www.insurance.ca.gov/0300-fraud/", phone: "1-800-927-4357" },
+    report: { label: { en: "California Department of Insurance (consumer line and fraud reports)", es: "Departamento de Seguros de California (línea al consumidor y fraude)" }, url: "https://www.insurance.ca.gov/0300-fraud/", phone: "1-800-927-4357" },
     does: {
       en: ["Lets you enroll free with certified enrollers", "Sends premium bills from your own health plan"],
       es: ["Le deja inscribirse gratis con consejeros certificados", "Las facturas de prima vienen de su propio plan de salud"],
@@ -119,8 +119,8 @@ export const AGENCIES = {
     name: { en: "PG&E (incl. CARE / FERA discounts)", es: "PG&E (incluye descuentos CARE / FERA)" },
     domains: ["pge.com"],
     keywords: ["pg&e", "pge", "pg and e", "care discount", "fera", "disconnect", "desconexión", "desconexion", "power will be shut off", "luz", "electricity", "electricidad", "utility"],
-    verify: { phone: "1-800-743-5000", url: "https://www.pge.com" },
-    report: { label: { en: "PG&E customer service (report an impostor)", es: "Servicio al cliente de PG&E (reportar un impostor)" }, url: "https://www.pge.com/en/account/scams.html", phone: "1-800-743-5000" },
+    verify: { phone: "1-877-660-6789", url: "https://www.pge.com" },
+    report: { label: { en: "PG&E scam line (1-833-500-SCAM)", es: "Línea de estafas de PG&E (1-833-500-SCAM)" }, url: "https://www.pge.com/en/account/customer-service/scams.html", phone: "1-833-500-7226" },
     does: {
       en: ["Sends written past-due notices well before any shutoff", "Enrolls you in CARE/FERA for free at pge.com"],
       es: ["Envía avisos por escrito mucho antes de cualquier corte", "Le inscribe gratis en CARE/FERA en pge.com"],
@@ -134,7 +134,7 @@ export const AGENCIES = {
     name: { en: "Lifeline phone/internet discount", es: "Descuento Lifeline de teléfono/internet" },
     domains: ["californialifeline.com", "lifelinesupport.org", "fcc.gov", "cpuc.ca.gov", "usac.org"],
     keywords: ["lifeline", "acp", "affordable connectivity", "free phone", "teléfono gratis", "telefono gratis", "free tablet", "internet discount", "free internet"],
-    verify: { phone: "1-877-858-7433", url: "https://www.californialifeline.com" },
+    verify: { phone: "1-877-858-7463", url: "https://www.californialifeline.com" },
     report: { label: { en: "FCC consumer complaints", es: "Quejas al consumidor de la FCC" }, url: "https://consumercomplaints.fcc.gov", phone: "1-888-225-5322" },
     does: {
       en: ["Gives a monthly phone or internet discount through a participating company", "Is free to apply for"],
@@ -165,7 +165,7 @@ export const AGENCIES = {
     domains: ["edd.ca.gov", "ca.gov"],
     keywords: ["edd", "unemployment", "desempleo", "state disability", "sdi", "paid family leave"],
     verify: { phone: "1-800-300-5616", url: "https://edd.ca.gov" },
-    report: { label: { en: "EDD fraud reporting", es: "Reportar fraude al EDD" }, url: "https://edd.ca.gov/en/unemployment/fraud", phone: null },
+    report: { label: { en: "EDD fraud hotline", es: "Línea de fraude del EDD" }, url: "https://edd.ca.gov/en/about_edd/fraud", phone: "1-800-229-6297" },
     does: {
       en: ["Uses your myEDD account for messages", "Pays benefits to the debit card or bank you chose"],
       es: ["Usa su cuenta myEDD para mensajes", "Paga a la tarjeta o banco que usted eligió"],
